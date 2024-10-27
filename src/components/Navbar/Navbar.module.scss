@@ -1,0 +1,56 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.0); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header:hover{
+    background: #fff; 
+    .logo {
+        color: #000;
+    }
+    .navbar a{
+        color: #000;
+    }
+    .navbar a::before{
+        content: '';
+        background: #000;
+
+    }
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    font-weight: 700;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    top: 100%;
+    left: 0;
+    transition: .4s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
