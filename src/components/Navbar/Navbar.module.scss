@@ -1,38 +1,49 @@
-:root {
-  --mainColor: #29335c;
-  --mainColorLight: #5767aa;
-  --secondaryColor: #db2b39;
-  --textColor: #eee;
-}
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainColor);
-  color: var(--textColor);
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
 
   &__logo {
     font-size: 32px;
-    // color: white;
+    color: var(--white);
     font-weight: 700;
   }
 
   &__navbar {
+    // gap: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
   }
 
-  &__nav a {
-    margin: 0 1rem;
+  &__navbar a {
+    position: relative;
+    color: var(--white);
+    margin: 0 3rem;
     text-decoration: none;
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--black);
+      transition: 0.5s;
+    }
+
     &:hover {
-      color: red;
+      &::before {
+        width: 100%;
+      }
     }
   }
 
@@ -46,30 +57,47 @@
     background: transparent;
     border: none;
     outline: none;
-    visibility: hidden;
-    opacity: 0;
+    // visibility: hidden;
+    // opacity: 0;
     font-size: 1.8rem;
+    display: none;
+  }
+
+  &:hover {
+    background-color: var(--white);
+    transition: 0.8s;
+
+    .header__logo {
+      color: var(--black);
+    }
+    .header__navbar a {
+      color: var(--black);
+    }
+
+    .header__navBtn {
+      color: var(--black);
+    }
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .header {
     &__navBtn {
-      visibility: visible;
-      opacity: 1;
+      display: block;
+      color: var(--white);
     }
 
     &__navbar {
       position: fixed;
-      top: -100vh;
+      top: -50vh;
       left: 0;
-      height: 100%;
+      height: 30%;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: var(--mainColor);
+      background-color: var(--white);
       gap: 1.5rem;
       transition: 1s;
     }
@@ -87,5 +115,5 @@
 }
 
 .responsiveNav {
-  transform: translateY(100vh); // Example style
+  transform: translateY(50vh);
 }
