@@ -1,56 +1,91 @@
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: rgba(255, 255, 255, 0.0); 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
 }
 
-.header:hover{
-    background: #fff; 
-    .logo {
-        color: #000;
-    }
-    .navbar a{
-        color: #000;
-    }
-    .navbar a::before{
-        content: '';
-        background: #000;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
 
-    }
-}
-
-.logo {
+  &__logo {
     font-size: 32px;
-    color: white;
+    // color: white;
     font-weight: 700;
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  &__nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  &__nav a:hover {
+    color: var(--secondaryColor);
+  }
+
+  &__navBtn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+  }
 }
 
-.navbar a{
-    position: relative;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 500;
-    margin-left: 40px;
+@media only screen and (max-width: 1024px) {
+  .header {
+    &__navBtn {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &__navbar {
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--mainColor);
+      gap: 1.5rem;
+      transition: 1s;
+    }
+
+    &__navBtnClose {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    &__navbar a {
+      font-size: 1.5rem;
+    }
+  }
 }
 
-.navbar a::before{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    top: 100%;
-    left: 0;
-    transition: .4s;
-}
-
-.navbar a:hover::before{
-    width: 100%;
+.responsiveNav {
+  transform: translateY(100vh); // Example style
 }
