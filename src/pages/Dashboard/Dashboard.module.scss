@@ -1,19 +1,33 @@
-.bgVideo{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Anton&family=Autour+One&family=Bowlby+One&family=Caveat+Brush&family=Chicle&family=Spicy+Rice&family=Ubuntu:wght@300&display=swap');
+
+.bgVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 
-.topic{
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    right: 50vh;
-    font-size: 80px;
+.topic {
+  position: absolute;
+  bottom: 20vh;
+  left: 5vw;
+  color: #fff;
+  font-size: 5vw;
+  font-family: 'Aclonica', sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
+
+@media (max-width: 991px) {
+  .topic {
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .topic {
+    font-size: 12vw;
+  }
+}
+
+

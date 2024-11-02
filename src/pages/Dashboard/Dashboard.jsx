@@ -7,7 +7,7 @@ import styles from './Dashboard.module.scss'
 
 export default function Dashboard() {
   return (
-    <div>
+    <div className='container'>
       <Navbar />
       {/* <h1>hi</h1> */}
       <video className={`${styles.bgVideo}`}  src={videoBg} autoPlay loop muted/>

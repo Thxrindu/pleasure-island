@@ -7,3 +7,10 @@
 a {
   text-decoration: none;
 }
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --mainColorLight: #009975;
+  --secondaryColor: #db2b39;
+}
