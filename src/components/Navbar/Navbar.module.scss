@@ -8,8 +8,8 @@
   height: 80px;
   padding: 0 2rem;
   background-color: transparent;
-  background-color: rgba(255, 255, 255, 0);
   z-index: 1;
+  transition: background-color 0.3s, color 0.3s;
 
   &__logo {
     font-size: 32px;
@@ -100,7 +100,7 @@
       justify-content: center;
       background-color: var(--white);
       gap: 1.5rem;
-      transition: 1s;
+      transition: top 1s;
     }
 
     &__navBtnClose {
@@ -112,6 +112,25 @@
     &__navbar a {
       font-size: 1.5rem;
     }
+  }
+}
+
+// Add classes for visible and hidden states
+.visible {
+  top: 0; // When visible
+}
+
+.hidden {
+  top: -80px; // Adjust this value based on the height of your navbar
+}
+
+.scrolled {
+  background-color: white; // Background color when scrolled
+  .header__logo {
+    color: black; // Logo color when scrolled
+  }
+  .header__navbar a {
+    color: black; // Text color when scrolled
   }
 }
 
