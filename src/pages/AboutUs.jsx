@@ -1,9 +1,40 @@
-import React from 'react'
+import React from 'react';
 
 export default function AboutUs() {
   return (
-    <div>
+    <div id='about'>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
+      <h1> THIS IS ABOUT US PAGE </h1>
       <h1> THIS IS ABOUT US PAGE </h1>
     </div>
-  )
+  );
 }
