@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import Navbar from './components/Navbar/Navbar';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
-
   return (
-    <>
-      <h1> Hello  </h1>
-    </>
-  )
+    <div className='container'>
+      <Navbar />
+      <Dashboard />
+      <AboutUs />
+      <ContactUs />
+    </div>
+  );
 }
 
-export default App
+export default App;
