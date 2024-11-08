@@ -60,6 +60,15 @@ const Navbar = () => {
           Home
         </Link>
         <Link
+          to='packages'
+          smooth={true}
+          duration={500}
+          onClick={showNavbar}
+          className={`${styles.header__link}`}
+        >
+          Packages
+        </Link>
+        <Link
           to='about'
           smooth={true}
           duration={500}
