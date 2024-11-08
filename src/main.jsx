@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css';
 import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs.jsx';
 import NotFoundPage from './pages/NotFoundPage';
+import Packages from './pages/Packages/Packages.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,16 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
+    path: '/packages',
+    element: <Packages />,
+  },
+  {
     path: '/about',
     element: <AboutUs />,
+  },
+  {
+    path: '/contactus',
+    element: <ContactUs />,
   },
 ]);
 

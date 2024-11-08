@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 50px 50px; /* Add 50px margin on both sides */
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #007bff;
+  }
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: hidden;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.card {
+  flex: 0 0 22%; /* Ensures 4 cards are visible at a time */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  height: 250px;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 150px; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .card {
+    height: 250px; /* Adjusted height for tablets */
+  }
+  .cardImage {
+    height: 130px; /* Adjusted image height */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 250px; /* Adjusted height for small tablets */
+  }
+  .cardImage {
+    height: 120px; /* Adjusted image height */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 0 0 45%; /* Two cards per row for mobile view */
+    height: 200px; /* Adjusted height for mobile */
+  }
+  .cardImage {
+    height: 100px; /* Adjusted image height */
+  }
+}
