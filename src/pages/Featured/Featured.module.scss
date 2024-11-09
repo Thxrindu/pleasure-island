@@ -1,0 +1,32 @@
+.featured {
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.fheading {
+  position: absolute;
+  top: -8%;
+  left: 10%;
+  z-index: 1;
+  font-size: 4vw;
+}
+
+.videoFeatured {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .fheading {
+    font-size: 8vw;
+    top: -13%;
+  }
+}
+
+@media (max-width: 500px) {
+  .fheading {
+    font-size: 12vw;
+    top: -20%;
+  }
+}
